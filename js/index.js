@@ -1,4 +1,48 @@
-//============================================carrito==================================================================
+//filtro categorias
+$(document).ready(function(){
+    $('.filtro .filtro-productos[categoria="todo"]').addClass('filtro-activado');
+
+    $('.filtro-productos').click(function() {
+        let ctproducto = $(this).attr('categoria')
+        console.log(ctproducto)
+        $('.filtro-productos').removeClass('filtro-activado');
+        $(this).addClass('filtro-activado');
+
+        $('.productos').css('transform', 'scale(0)');
+        function ocultarprod(){
+            $('.productos').hide();
+        } setTimeout (ocultarprod,200);
+
+        function mostrarprod(){            
+            $('.productos[categoria="'+ctproducto+'"]').show();
+            $('.productos[categoria="'+ctproducto+'"]').css('transform', 'scale(1)');
+        } setTimeout (mostrarprod,200);
+        
+        $('.filtro-productos[categoria="todo"]').click(function() {
+            function mostrartodo (){
+            $('.productos').show();
+            $('.productos').css('transform', 'scale(1)');
+            } setTimeout (mostrartodo,200)
+        })
+    });
+});
+
+//filtro buscador
+document.addEventListener('keyup',e =>{
+
+    if(e.target.matches('#buscador')) {
+
+        document.querySelectorAll('.productos').forEach(instrumentos => {
+
+            instrumentos.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+            ?instrumentos.classList.remove("buscador")
+            :instrumentos.classList.add("buscador")
+    })
+    }
+})
+
+//agregar al carrito
+
 const productos = [
     { nombre:"bajo schecter SGR", precio: 78000 },
     { nombre:"bajo warwick", precio: 70000 },
@@ -25,108 +69,129 @@ const productos = [
 
 let carrito  = []
 
-let seleccion = prompt("Hola desea comprar algun instrumentos o producto musical (responder con si o no)")
+$(document).ready(function(){
+    $(".inst1").click(function(){
+        console.log(productos[0])
+    })
+})
 
-while(seleccion != "si" && seleccion != "no"){
-    alert("por favor ingresar si o no")
-    seleccion = prompt("Hola desea comprar algun instrumentos o producto musical (responder con si o no)") 
-}
+$(document).ready(function(){
+    $(".inst2").click(function(){
+        console.log(productos[1])
+    })
+})
 
-if(seleccion == "si"){
-    alert("a continuacion nuestra lista de productos")
-    let mostrarproducto = productos.map((productos) =>productos.nombre + " " + productos.precio + "$");
-    alert(mostrarproducto.join("\n"))
-} else if (seleccion == "no"){
-    alert("gracias por venir!!")
-}
+$(document).ready(function(){
+    $(".inst3").click(function(){
+        console.log(productos[2])
+    })
+})
 
-while(seleccion != "no"){
-    let producto = prompt("agrega un producto a tu carrito")
-    let precio = 0
-    if (producto == "bajo schecter SGR" || producto == "bajo warwick" || producto == "bajo yamaha" || producto == "bateria pearl" || producto == "bateria mapex" || producto == "bateria parquer" || 
-    producto == "guitarra criolla parquer" || producto == "guitarra acustica parquer" || producto == "guitarra electrica gibson" || producto == "guitarra electrica jackson" || 
-    producto == "microfono SKP pro" || producto == "microfono gadnic" || producto == "teclado casio" || producto == "teclado yamaha" || 
-    producto == "bafle CJK" || producto == "cuerdas de bajo" || producto == "cuerdas de guitarra acustica" || producto == "Cuerdas de guitarra criolla" || producto == "cuerdas de guitarra electrica" || producto == "palillos sambys" || producto == "puas stagg" ){
-        switch(producto) {
-            case "bajo schecter SGR":
-                precio = 78000;
-                break;
-            case "bajo warwick":
-            precio = 70000;
-            break;
-            case "bajo yamaha":
-                precio = 65000;
-                break;
-            case "bateria pearl":
-                precio = 95000;
-                break;
-            case "bateria mapex":
-            precio = 120000;
-            break;
-            case "bateria parquer":
-                precio = 10000;
-                break;
-            case "guitarra criolla parquer":
-                precio = 20000;
-                break;
-            case "guitarra acustica parquer":
-                precio = 35000;
-                break;
-            case "guitarra electrica gibson":
-                precio = 65000;
-                break;
-            case "guitarra electrica jackson":
-                precio = 68500;
-                break;
-            case "microfono SKP pro":
-                precio = 20000;
-                break;
-            case "microfono gadnic":
-                precio = 18000;
-                break;
-            case "teclado casio":
-                precio = 30000;
-                break;
-            case "teclado yamaha":
-                precio = 45000;
-                break;
-            case "bafle CJK":
-                precio = 25000;
-                break;
-            case "cuerdas de bajo":
-                precio = 5000;
-                break;
-            case "cuerdas de guitarra acustica":
-                precio = 4000;
-                break;
-            case "Cuerdas de guitarra criolla":
-                precio = 3300;
-                break;
-            case "cuerdas de guitarra electrica":
-                precio = 6000;
-                break;
-            case "palillos sambys":
-                precio = 1500;
-                break;
-            case "puas stagg":
-                precio = 1000;
-                break;
-            default:
-                break;
-        }
-    let unidades = parseInt(prompt("cuantas unidades quiere comprar??"))
+$(document).ready(function(){
+    $(".inst4").click(function(){
+        console.log(productos[3])
+    })
+})
 
-    carrito.push({producto, unidades, precio})
-    } else {
-        alert("no tenemos ese producto")
-    }
+$(document).ready(function(){
+    $(".inst5").click(function(){
+        console.log(productos[4])
+    })
+})
 
-    seleccion = prompt("desea seguir comprando??")
-    while(seleccion === "no"){
-        alert("gracias por la compra!!")
-        carrito.forEach((carritofinal) =>{
-            console.log(`producto : ${carritofinal.producto}, unidades: ${carritofinal.unidades}, precio final: ${carritofinal.unidades * carritofinal.precio} `)
-        })
-    break;
-    }
-}
+$(document).ready(function(){
+    $(".inst6").click(function(){
+        console.log(productos[5])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst7").click(function(){
+        console.log(productos[6])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst8").click(function(){
+        console.log(productos[7])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst9").click(function(){
+        console.log(productos[8])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst10").click(function(){
+        console.log(productos[9])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst11").click(function(){
+        console.log(productos[10])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst12").click(function(){
+        console.log(productos[11])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst13").click(function(){
+        console.log(productos[12])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst14").click(function(){
+        console.log(productos[13])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst15").click(function(){
+        console.log(productos[14])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst16").click(function(){
+        console.log(productos[15])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst17").click(function(){
+        console.log(productos[16])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst18").click(function(){
+        console.log(productos[17])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst19").click(function(){
+        console.log(productos[18])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst20").click(function(){
+        console.log(productos[19])
+    })
+})
+
+$(document).ready(function(){
+    $(".inst21").click(function(){
+        console.log(productos[20])
+    })
+})
+

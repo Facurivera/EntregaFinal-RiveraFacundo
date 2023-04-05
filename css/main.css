@@ -24,15 +24,12 @@ input {
   border-radius: 20px;
   border-color: #5f0000; }
 
-/*=================================================BUSCADOR================================================================*/  
-
-.productos .buscador {
- 
-  display: none;
-
+.carrito{
+  border: none;
+  background: none;
 }
 
-/*==================================================FILTROS===============================================================*/
+/*====================================FILTROS===============================================================*/
 
 .filtro {
   display: flex;
@@ -92,12 +89,18 @@ input {
   max-height: 15%; 
   height: 100%;}
 
-.lista_productos .productos a:hover {
+.lista_productos .productos button:hover {
   color: black;}
 
-.lista_productos .productos p a{
+.lista_productos .productos p button{
   color: white;
   text-decoration: none;
   font-size: large;
   margin-left: 10%;
+  background: none;
+  border: none;
+}
+/*=================================================BUSCADOR================================================================*/  
+.buscador {
+  display: none;
 }
