@@ -11,9 +11,10 @@ body {
   margin: auto; }
 
 .catalogo {
-  display: flex; }
+  display: flex; 
+  justify-content: space-around;}
 
-input {
+.wrap input {
   text-align: initial;
   margin: auto;
   display: flex;
@@ -52,6 +53,10 @@ input {
 .filtro .filtro-activado {
   background-color: black; }
 
+.hide{
+  display: none;
+}
+
 /*==================================================PRODUCTOS==============================================================*/
 
 .contenido{
@@ -59,7 +64,7 @@ input {
   display: flex;
   flex-wrap: wrap; }
 
-.carta{
+.cards{
   width: 50%;
   height: 30%;
   max-height: 500px;
@@ -103,6 +108,7 @@ input {
   background-color: #000000;
   width: 100%;
 }
+
 
 .eliminarProd{
   cursor: pointer;
@@ -187,10 +193,8 @@ input {
 }
 
 .totalContenido{
-  font-size: 14PX;
+  font-size: 20PX;
   padding: 20px;
-  text-align: end;
-  display: block;
 }
 .suma{
   cursor: pointer;
@@ -205,4 +209,85 @@ input {
 .eliminarprod{
   cursor: pointer;
   font-size: 12px;
+}
+
+.vaciar{
+  border-radius: 10px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  margin-right: 100px;
+}
+.vaciar:hover{
+  color:#c40000;
+}
+
+.comprar{
+  border-radius: 10px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  margin-left: 100px;
+}
+.comprar:hover{
+  color:#c40000;
+}
+
+/*=========================================FINALIZAR COMPRAR==========================================================*/
+
+.compraheader{
+  margin-top: 1%;
+}
+
+.titulo_compra{
+  display: flex;
+  justify-content: space-around;
+  font-size: 50px;
+  
+}
+
+.compracliente{
+  margin: 5%;
+}
+
+.oracion{
+  margin-bottom: 5%;
+  width: 50%;
+  display: inline-flex;
+}
+
+.datos{
+  font-size: 20px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  width: 15%;
+}
+
+.barra{
+  border-radius: 2px;
+  border: 1px solid rgba(155, 155, 155, 0.979);
+  border-top: none;
+  border-left: none;
+  border-bottom-right-radius: 5px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.compracontenido{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 10px;
+}
+
+.finalizar{
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color:#5f0000;
+  color: white;
+  font-size: 25px;
+  margin-top: 5%;
+  margin-left: 75%;
 }

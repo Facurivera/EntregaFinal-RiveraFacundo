@@ -55,6 +55,16 @@ const pintarCarrito = () => {
 
     let eliminar = carritocontenido.querySelector(".eliminarprod");
     eliminar.addEventListener("click", () =>{
+
+        Toastify({
+            text: "Tu producto se elimino correctamente",
+            duration: 2000,
+            gravity: "bottom",
+            style: {
+                background: "linear-gradient(to right, #000000, #5f0000)",
+              }
+        }).showToast();
+
         eliminarprod(product.id);
     })
     });
@@ -63,8 +73,37 @@ const pintarCarrito = () => {
 
     const totalcomprado = document.createElement("div");
     totalcomprado.className = "totalContenido";
-    totalcomprado.innerHTML =`Total : ${total} $`;
+    totalcomprado.innerHTML =`<button class="vaciar">vaciar carrito</button>
+        Total : ${total} $
+        <button class="comprar">comprar</button>`;
     modalcontenido.append(totalcomprado);
+
+    let vaciar = totalcomprado.querySelector(".vaciar")
+    vaciar.addEventListener("click", ()=>{
+        carrito.length = []
+        
+        carritomostrar()
+        Save()
+        pintarCarrito()
+    })
+
+    let comprar = totalcomprado.querySelector(".comprar")
+    comprar.addEventListener("click", ()=>{
+        if(carrito.length === 0){
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Agregue un producto para comprar',
+                confirmButtonText: "Aceptar",
+                color: "black",
+                confirmButtonColor: "#5f0000",
+                confirmButtonTextColor: "black",
+              })
+        }else {
+            location.href = "compra.html"
+        }
+    })
+
 
 };
 

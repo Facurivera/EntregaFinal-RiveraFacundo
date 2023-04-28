@@ -32,22 +32,31 @@
           </nav>
     </header>
     <main>
-      <div class="wrap">
-          <input  type="search" name="buscador"  id="buscador" placeholder="Buscar...">
-      
-        <div class="catalogo">
-          <div id="contenido" class="contenido"></div>
+        <div id="contenido_compra" class="contenido_compra">
+          <div class="compraheader">
+            <h3 class="titulo_compra">Compra a realizar</h3>
+          </div>
+          <div class="compracliente" id="procesar-pago">
+            <div class="oracion"> <p class="datos">Cliente:</p> 
+              <input type="text" name="cliente" id="cliente" class="barra cliente" placeholder="Ingrese su nombre completo..."></div><br>
+            <div class="oracion"><p class="datos">Mail:</p>
+              <input type="text" name="Mail" id="mail" class="barra mail" placeholder="Ingrese su mail..."></div><br>
+            <div class="oracion"><p class="datos">Cel:</p>
+              <input type="text" name="celular" id="cel" class="barra cel" placeholder="Ingrese su numero de telefono"></div>
+          </div>
+          <div class="comprafooter">
+            <button id="finalizar" class="finalizar">Finalizar compra</button>
+          </div>
         </div>
-      </div>
-
-      <div id="modal-contenido" class="modal-contenido"></div>
-
-
+        <div id="modal-contenido" class="modal-contenido"></div>
+        
     </main>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/carrito.js"></script>
+    <script src="./js/comprar.js"></script>
+
 </body>
 
 </html>
