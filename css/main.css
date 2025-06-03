@@ -1,5 +1,5 @@
 header {
-  background-color: #5f0000;
+  background-color: #b10000d1;
   border: solid 2px black; }
 
 body {
@@ -23,7 +23,7 @@ body {
   margin-bottom: 15px;
   border: solid 2px;
   border-radius: 20px;
-  border-color: #5f0000; }
+  border-color: #b10000d1; }
 
 .carrito{
   border: none;
@@ -43,7 +43,7 @@ body {
   width: 90%;
   padding: 15px 0;
   margin-bottom: 20px;
-  background: #5f0000;
+  background: #b10000d1;
   border: solid 2px black;
   border-radius: 14px;
   text-align: center;
@@ -83,7 +83,7 @@ body {
   .producto{
   display: block;
   width: 100%;
-  background: #5f0000;
+  background: #b10000d1;
   text-align: center;
   text-decoration: none;
   color: white;
@@ -95,7 +95,7 @@ body {
   }
 
 .agregar:hover {
-  color: #c40000;}
+  color: #b10000d1;}
 
 .agregar{
   color: white;
@@ -140,7 +140,7 @@ body {
   margin-left: 50%;
   max-height: 83%;
   color: white;
-  background-color: #5f0000;
+  background-color: #b10000d1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -174,7 +174,7 @@ body {
 }
 
 .modalHeaderBoton:hover{
-  color: #5f0000;
+  color: #b10000d1;
 }
 
 .modalProductos{
@@ -219,7 +219,7 @@ body {
   margin-right: 100px;
 }
 .vaciar:hover{
-  color:#c40000;
+  color:#b10000d1;
 }
 
 .comprar{
@@ -230,7 +230,7 @@ body {
   margin-left: 100px;
 }
 .comprar:hover{
-  color:#c40000;
+  color:#b10000d1;
 }
 
 /*=========================================FINALIZAR COMPRAR==========================================================*/
@@ -285,7 +285,7 @@ body {
 .finalizar{
   border: 2px solid black;
   border-radius: 5px;
-  background-color:#5f0000;
+  background-color:#b10000d1;
   color: white;
   font-size: 25px;
   margin-top: 5%;
